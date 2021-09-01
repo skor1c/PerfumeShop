@@ -1,0 +1,403 @@
+* {
+	margin: 0;
+	padding: 0;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+	font-family: Gothic;
+	src: url(Fontovi/GOTHIC.TTF);
+}
+
+body{
+    color: #000000;
+    font-family: Gothic, sans-serif !important;
+    font-size: 22px;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+header {
+    background-color: #897567;
+    padding: 0 10%;
+    overflow: auto;
+}
+
+header img {
+    float: left;
+    margin-top: 30px;
+    height: 80px;
+}
+
+.menu{
+    float: right;
+}
+
+nav a {
+    display: inline-block;
+    padding: 50px 30px 0 30px;
+	color: #ffffff;
+    transition: 0.5s;
+    font-size: 25px;
+}
+
+nav a:last-child{
+    padding-right: 0px;
+}
+
+nav a:hover {
+    color: #000000;
+}
+
+.hamburger, .cross{
+    visibility: hidden;
+}
+  
+.hamburgermenu{
+    visibility: hidden;
+}
+
+#pocetna{
+    height: 100vh;
+    background: linear-gradient(to bottom right, #897567 50%, #fff 50%);
+}
+
+@keyframes dugme {
+    0% {transform:translate(0px) ;}
+    50% {transform: translate(100px);}
+    100% {transform:translate(0px) ;}
+  }
+
+#dugme{
+    left: 10%;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 25%;
+}
+
+#dugme svg{
+    padding-left: 50px;
+}
+
+#dugme:hover{
+    animation: dugme 2.3s infinite;
+}
+
+@keyframes slika{
+    from{transform: scale(1);}
+    to{transform: scale(1.02);}
+}
+
+#slika{
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+}
+
+#slika img{
+    height: 26vw;
+    animation: slika 1s infinite alternate;
+}
+
+#onama h2{
+    padding-left: 10%;
+    font-size: 40px;
+    padding-bottom: 30px;
+}
+
+#onama p{
+    margin: 0 10%;
+    padding-bottom: 30px;
+}
+
+#flex{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 10%;
+
+}
+
+.flex-item{
+    display: grid;
+    place-items: center;
+    margin-bottom: 50px;
+}
+
+.flex-item h3{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.flex-item p{
+    font-size: 16px;
+    width: 240px;
+    text-align: center;
+    line-height: 22px;
+}
+
+.flex-item img{
+  height: 80px;
+}
+
+#proizvodi{
+    background: linear-gradient(to right, #fff 50%, #f4c2c2 50%);
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#proizvodi h2{
+    padding: 50px 0;
+}
+
+.grid img{
+    height: 15vw;
+    filter: drop-shadow(30px 25px 25px rgba(0, 0, 0, 0.5));
+    transition: 1s;
+}
+
+.grid img:hover{
+    transform: scale(1.1);
+}
+
+.grid h4{
+    padding-top: 30px;
+    font-size: 18px;
+}
+
+.grid p{
+    padding-top: 10px;
+    padding-bottom: 40px;
+    font-size: 16px;
+}
+
+#naruci h2{
+    margin-left: 10%;
+    font-size: 40px;
+    padding: 20px 0;
+}
+
+select, input, textarea, #potvrda{
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+    outline: none;
+    border: #000 solid 0.25px;
+    border-radius:7px;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-family: Gothic;
+}
+
+::placeholder{
+    color: #000;
+}
+  
+#potvrda{
+    border-radius:7px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #000;
+    border: #000 solid 0.25px;
+    cursor: pointer;
+    transition: 0.5s;
+    width: 65%;
+    text-align: center;
+}
+  
+#potvrda:hover{
+    color: #fff;
+    background-color: #897567;
+    border: #897567 solid 0.25px;
+}
+
+#kontakt{
+    background-color: #897567;
+    margin-top: 30px;
+}
+
+#kontakt h2{
+    text-align: center;
+    font-size: 40px;
+    padding: 30px 0;
+    color: #fff;
+}
+
+#kontakt p{
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+#wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+iframe{
+    border-radius: 10px;
+    width: 500px;
+    height: 250px;
+}
+
+footer{
+    text-align: center;
+    padding: 30px 0;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+@media screen and (max-width:1035px){
+    nav a {
+        padding: 50px 10px 0 10px;
+        font-size: 23px;
+    }
+
+    header img {
+        margin-top: 40px;
+        height: 60px;
+    }
+    
+    #dugme{
+        font-size: 25px;
+        bottom: 17%;
+    }
+    
+    #dugme svg{
+        transform: scale(0.7);
+        padding-left: 17px;
+    }
+}
+
+@media screen and (max-width:780px){
+    .hamburgermenu {
+        padding-top:50px;
+        position: absolute;
+        width: 100%;
+        right: 0;
+        background-color:rgba(0, 0, 0, 0.5);
+        visibility: visible;
+    }
+    
+    .menu{
+        display: none;
+    }
+      
+    .hamburger, .cross{
+        background: none;
+        border: none;
+        outline: none;
+        color: #ffffff;
+        position: absolute;
+        top: 40px;
+        right: 10%;
+        z-index: 999;
+        cursor: pointer;
+        visibility: visible;
+    }
+      
+    .hamburger{
+        font-size: 40px;
+    }
+      
+    .cross{
+        font-size: 80px;
+        padding: 0 6px 0 0;
+    }
+    
+    nav a {
+        position: relative;
+        display: block;
+        padding: 0 0 40px 0;
+        font-size: 20px;
+        text-align: center;
+    }
+      
+    nav a:first-child{
+        padding-top: 80px;
+    }
+
+    #slika img{
+          height: 270px;
+    }
+
+    #dugme{
+        display: none;
+    }
+
+    #onama h2{
+        font-size: 32px;
+    }
+
+    #onama p{
+        font-size: 20px;
+    }
+
+    .flex-item{
+        margin-bottom: 0x;
+    }
+    
+    .flex-item h3{
+        font-size: 18px;
+        font-weight: bolder;
+    }
+
+    .flex-item p{
+        font-size: 10px;
+        line-height: 25px;
+    }
+
+    #proizvodi{
+        background: linear-gradient(to top, #fff 50%, #f4c2c2 50%);
+        grid-template-columns: auto;
+    }
+
+    .grid img{
+        height: 170px;
+    }
+
+    #naruci h2{
+        font-size: 32px;
+    }
+
+    select, input, textarea, #potvrda{
+        padding: 8px;
+        font-size: 15px;
+    }
+
+    #kontakt h2{
+        font-size: 32px;
+        text-align: left;
+        margin-left:10% ;
+    }
+
+    #kontakt p{
+        font-size: 18px;
+        margin-left: 10%;
+    }
+    
+    #wrap{
+        display: block;
+    }
+    
+    iframe{
+        margin-left: 10%;
+        width: 350px;
+        height: 180px;
+    }
+    
+    footer{
+        padding: 20px 0;
+        font-size: 14px;
+    }
+}
